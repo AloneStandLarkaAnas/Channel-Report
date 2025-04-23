@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Citizen Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #ffcc00;
+      text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff5733, #ffcc00);
+      color: white;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(45deg, #ffcc00, #ff5733);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .message {
+      display: none;
+    }
+
+    .background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: url('https://www.w3schools.com/w3images/nature.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container"></div>
+
+  <h1>Report Offensive WhatsApp Channel</h1>
+
+  <button class="btn" onclick="sendEmail()">Send Report</button>
+
+  <script>
+    function sendEmail() {
+      const subject = "Immediate Action Required – Blasphemous & Pornographic Content on WhatsApp Channel";
+      const body = `
+        Subject: Immediate Action Required – Blasphemous & Pornographic Content on WhatsApp Channel
+
+        Respected Authorities,
+
+        I hope this message finds you well. I am writing to bring to your urgent attention a highly offensive and illegal WhatsApp channel that is currently spreading blasphemous content against the Sahaba (R.A), as well as sharing explicit pornographic material.
+
+        Channel Name: ZAKOTA ARMY  
+        Channel Link: https://whatsapp.com/channel/0029VbAyiXU5Ejy1MYF9o919
+
+        The content violates:
+        - Islamic values and the dignity of Sahaba (R.A)
+        - Pakistan Electronic Crimes Act (PECA) 2016
+        - Social media platform community guidelines
+        - Cyber Crime Prevention and Blasphemy Laws
+
+        I humbly request your good office to:
+        1. Investigate the content of the above-mentioned channel.
+        2. Take immediate legal action against the administrators.
+        3. Coordinate with WhatsApp and Meta to have this channel removed.
+        4. Prevent such acts in the future by monitoring such channels.
+
+        We trust in your authority and dedication to preserving the sanctity of religion and law.
+
+        Thank you.
+
+        Sincerely,  
+        Concerned Citizen
+      `;
+      const emailAddresses = [
+        "info@pta.gov.pk",
+        "helpdesk@nr3c.gov.pk",
+        "info@moitt.gov.pk",
+        "complaints@pemra.gov.pk",
+        "info@interior.gov.pk",
+        "info@pakistansulemacouncil.org",
+        "contact@saudicybersecurity.com",
+        "info@moia.gov.sa",
+        "info@citc.gov.sa",
+        "contact@alifta.gov.sa",
+        "info@ispr.gov.pk",
+        "info@pakistanpolice.gov.pk",
+        "feedback@sbp.org.pk",
+        "info@fbr.gov.pk",
+        "info@army.gov.pk",
+        " watsunban@gmail.com",
+        "feedback@sed.gov.pk"
+      ];
+
+      const emailLink = `mailto:${emailAddresses.join(",")}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = emailLink;
+    }
+  </script>
+</body>
+</html>
